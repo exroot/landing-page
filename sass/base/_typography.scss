@@ -1,0 +1,62 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-gray;
+    padding: 0rem;
+}
+
+.heading-primary {
+    color:$color-white;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 900;
+        letter-spacing: 1.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    &--sub {
+        display: block;
+        font-size: 2.8rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        background-color: $color-primary-dark-transparent;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-delay: 500ms;
+        animation-timing-function: ease-out;
+        animation-fill-mode: backwards;
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    // font-family: 'Playfair Display';
+    display: inline-block;
+    // background-image: linear-gradient(to right, $color-gray, $color-black);
+    // background-clip: text;
+    // color: transparent;
+    letter-spacing: 2px;
+    transition: all .2s;
+    color: $color-gray;
+
+    &:hover {
+        transform: skewY(-4deg) skewX(-15deg) scale(1.2);
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.underlined {
+    border-bottom: 6px solid $color-primary-light;
+    line-height: 0.85;
+}
+
+.resalted {
+    color: $color-primary-dark;
+}
