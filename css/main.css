@@ -80,6 +80,17 @@ body {
     transform: skewY(-4deg) skewX(-15deg) scale(1.2);
     text-shadow: 0.5rem 1rem 2rem rgba(110, 79, 79, 0.2); }
 
+.heading-terciary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .underlined {
   border-bottom: 6px solid #ffc0cb;
   line-height: 0.85; }
@@ -90,8 +101,14 @@ body {
 .u-center-text {
   text-align: center; }
 
-.u-mb-8 {
+.u-margin-bottom-bg {
   margin-bottom: 8rem; }
+
+.u-margin-bottom-md {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-sm {
+  margin-bottom: 1.5rem; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -139,6 +156,53 @@ body {
   animation-delay: 1s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #f08080;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 2px solid #ffc0cb;
+  padding: 3px 6px;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #f08080;
+  color: #f0fff0;
+  box-shadow: 0 1rem 2rem rgba(110, 79, 79, 0.1);
+  transform: translateY(-3px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(110, 79, 79, 0.1);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(110, 79, 79, 0.15);
+    position: absolute;
+    max-height: 280px;
+    border-radius: 100rem;
+    transition: all .2s;
+    outline-offset: 1rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 0.5rem solid #ffc0cb;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(110, 79, 79, 0.55);
+      z-index: 1;
+      cursor: pointer; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(255, 192, 203, 0.801), rgba(143, 189, 204, 0.801)), url(../img/hero.jpg);
@@ -152,7 +216,7 @@ body {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 8.5rem; }
+    height: 10rem; }
   .header__text-box {
     position: absolute;
     top: 45%;
@@ -161,10 +225,9 @@ body {
     text-align: center; }
 
 .row {
-  max-width: 114rem;
+  max-width: 94rem;
   color: #808080;
-  margin: 0 auto;
-  text-align: center; }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
   .row::after {
