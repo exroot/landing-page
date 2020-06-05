@@ -5,7 +5,6 @@
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     position: relative;
-    border-bottom-right-radius: 15px;
 
     &__logo-box {
         position: absolute;
@@ -13,7 +12,7 @@
         left: 4rem;
     }
     &__logo {
-        height: 8.5rem;
+        height: 10rem;
     }
     &__text-box {
         position: absolute;

@@ -2,15 +2,24 @@
 $color-primary-light: #ffc0cb;
 $color-primary-dark: #f08080;
 $color-primary-dark-transparent: #f080806c;
+
 $color-secondary-light: #8fbdcc;
 $color-secondary-dark: #4c8ba0;
+
+$color-terciary-dark: #774ca0;
+$color-terciary-light: #ab8fcc;
+
 $color-gray: #808080;
 $color-white: #f0fff0;
-$color-black: rgb(110, 79, 79);
+$color-black: #6e4f4f;
 $color-gray-light-1: #f7f7f7;
+$color-gray-light-2: #eee;
+
+// FONT
+$default-font-size: 1.6rem;
 
 // GRID (FLOAT)
-$grid-width: 114rem;
+$grid-width: 94rem;
 $gutter-horizontal: 3rem;
 $gutter-vertical: 6rem;
 $grid-color: $color-gray;

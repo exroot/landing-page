@@ -52,6 +52,20 @@ body {
     }
 }
 
+.heading-terciary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
 .underlined {
     border-bottom: 6px solid $color-primary-light;
     line-height: 0.85;
