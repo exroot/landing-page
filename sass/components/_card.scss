@@ -1,0 +1,119 @@
+.card {
+    perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &__side {
+        transition: all .8s ease;
+        position: absolute;
+        height: 50rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 .5rem 4rem rgba($color-black, .15);
+        &--front {
+            background-color: white;
+        }
+        &--back {
+            transform: rotateY(180deg);
+            &--1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, $color-terciary-light, $color-terciary-dark);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+        }
+    }
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/joji.jpg);
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-terciary-light, $color-terciary-dark), url(../img/weeknd.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/daft-punk.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 27%;
+        right: 0%;
+        text-align: right;
+        width: 75%;
+    }
+    &__heading-span {
+        box-decoration-break: clone;
+        padding: .5rem .75rem;
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($color-terciary-light, .85), rgba($color-terciary-dark, .85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 1.5rem 2rem 3rem 2rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-gray-light-2;
+                }
+            }
+        }
+    }
+    // BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+    }
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}
