@@ -98,25 +98,25 @@ body {
   color: #f08080; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-bg {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-md {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-sm {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u-margin-top-bg {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
 .u-margin-top-md {
-  margin-top: 4rem; }
+  margin-top: 4rem !important; }
 
 .u-margin-top-sm {
-  margin-top: 1.5rem; }
+  margin-top: 1.5rem !important; }
 
 .bg-video {
   position: absolute;
@@ -139,7 +139,7 @@ body {
     transform: scaleX(2) scaleY(1.6);
     opacity: 0; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -147,9 +147,11 @@ body {
   transition: all 0.2s;
   border-radius: 10rem;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
 
-.btn:active {
+.btn:focus, .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(110, 79, 79, 0.1); }
 
@@ -363,7 +365,6 @@ body {
     box-shadow: 0 1rem 2rem rgba(110, 79, 79, 0.2);
     border-bottom: 3px solid #ffc0cb; }
     .form__input:focus:invalid {
-      outline: none;
       border-bottom: 3px solid red; }
   .form__input::placeholder {
     color: #808080; }
@@ -380,6 +381,45 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #f08080;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -.4rem;
+  left: 0; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f08080;
+    opacity: 0;
+    transition: opacity .3s;
+    transform: translate(30%, 30%); }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
 
 .story {
   width: 75%;
