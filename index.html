@@ -10,6 +10,24 @@
     <title>Practicing UI Design</title>
 </head>
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navigation-toggle">
+        <label for="navigation-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="" class="navigation__link"><span>01</span>About Music</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link"><span>02</span>Your benefits</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link"><span>03</span>Popular artists</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link"><span>05</span>Book now</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
             <img src="img/LOGO.png" alt="Logo" class="header__logo">
@@ -86,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-plans">
+        <section class="section-plans" id="plans">
             <div class="u-center-text u-margin-bottom-bg">
                 <h2 class="heading-secondary">
                     Check our <span class="text-underlined text-resalted">unrealistic</span> plans</span>
@@ -119,7 +137,7 @@
                                     <p class="card__price-value">
                                         $9.99
                                     </p>
-                                    <a href="" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +171,7 @@
                                     <p class="card__price-value">
                                         $19.99
                                     </p>
-                                    <a href="" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +205,7 @@
                                     <p class="card__price-value">
                                         $29.99
                                     </p>
-                                    <a href="" class="btn btn--white">Book now!</a>
+                                    <a href="#popup" class="btn btn--white">Book now!</a>
                                 </div>
                             </div>
                         </div>
@@ -309,5 +327,45 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/LOGO.png" alt="" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Contact us</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Privacy policy</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Built by <a href="#" class="footer__link">exroot</a>. Copyright &copy; by Elias Torrealba (<a href="#" class="footer__link">exroot</a>) for my own personal and commercial purposes.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/daft-punk.webp" alt="DaftPunk" class="popup__img">
+                <img src="img/weeknd.jpg" alt="Billie Eilish" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#plans" class="popup__close">&times;</a>
+                <h2 class="heading-secondary">
+                   Plan booking
+                </h2>
+                <p class="popup__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, ut praesentium? Tempore accusantium mollitia consequatur iure at reiciendis distinctio unde sapiente nostrum dolor, amet inventore ad optio doloribus voluptates esse?
+                </p>
+                <a href="" class="btn btn--pink-dark">Book now</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
