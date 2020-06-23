@@ -75,7 +75,7 @@
             background-color: $color-primary-dark;
             opacity: 0;
             transition: opacity .3s;
-            transform: translate(30%, 30%);
+            transform: translate(32%, 32%);
         }
     }
     &__radio-input:checked ~ &__radio-label &__radio-button::after {
