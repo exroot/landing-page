@@ -12,16 +12,27 @@ body {
     margin-bottom: 2.5rem;
     &--main {
         display: block;
-        font-size: 6rem;
+        font-size: 6.5rem;
         font-weight: 900;
         letter-spacing: 1.5rem;
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+        @include respond(tab-land) {
+            letter-spacing: .5rem;
+            font-size: 6rem;
+        }
+        @include respond(tab-port) {
+            letter-spacing: .3rem;
+            font-size: 5.5rem;
+        }
+        @include respond(phone) {
+            font-size: 5rem;
+        }
     }
     &--sub {
         display: block;
-        font-size: 2.8rem;
+        font-size: 3.5rem;
         font-weight: 400;
         letter-spacing: .5rem;
         background-color: $color-primary-dark-transparent;
@@ -30,24 +41,41 @@ body {
         animation-delay: 500ms;
         animation-timing-function: ease-out;
         animation-fill-mode: backwards;
+        padding: 0rem 15px 0rem 15px;
+        @include respond(tab-land) {
+            letter-spacing: .2rem;
+            font-size: 3rem;
+        }
+        @include respond(tab-port) {
+            letter-spacing: .1rem;
+            font-size: 2.5rem;
+        }
+        @include respond(phone) {
+            font-size: 2.3rem;
+            padding: 0rem 5px 0rem 5px;
+        }
     }
 }
 
 .heading-secondary {
-    font-size: 3rem;
+    font-size: 3.3rem;
     text-transform: uppercase;
     font-weight: 900;
-    // font-family: 'Playfair Display';
     display: inline-block;
-    // background-image: linear-gradient(to right, $color-gray, $color-black);
-    // background-clip: text;
-    // color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
     color: $color-gray;
-
+    @include respond(tab-land) {
+        font-size: 3rem;
+    }
+    @include respond(tab-port) {
+        font-size: 2.75rem;
+    }
+    @include respond(phone) {
+        font-size: 2.4rem;
+    }
     &:hover {
-        transform: skewY(-4deg) skewX(-15deg) scale(1.2);
+        transform: skewY(-4deg) skewX(-15deg) scale(1.1);
         text-shadow: 0.5rem 1rem 2rem rgba($color-black, .2);
     }
 }
