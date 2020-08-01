@@ -2,6 +2,7 @@
     &__group:not(:last-child) {
         margin-bottom: 2rem;
     }
+
     &__input {
         font-size: 1.5rem;
         padding: 1.5rem 2rem;
@@ -14,6 +15,9 @@
         width: 90%;
         transition: all .3s;
         display: block;
+        @include respond(tab-port) {
+            width: 100%;
+        }
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .2);
@@ -25,6 +29,17 @@
         }
         &::placeholder {
             color: $color-gray; 
+        }
+    }
+    &__submit-button {
+        margin-top: 4rem;
+        & > button {
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+        @include respond(tab-port) {
+            margin-top: 0rem;
         }
     }
     &__label {
@@ -44,6 +59,10 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
     &__radio-label {
         font-size: $default-font-size;
